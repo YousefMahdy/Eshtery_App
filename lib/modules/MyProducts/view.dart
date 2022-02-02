@@ -98,7 +98,7 @@ class _CartState extends State<MyProducts> {
                                     itemCount: snapshot.data.length,
                                     itemBuilder: (context, i) {
                                       return Dismissible(
-                                        onDismissed: () async {
+                                        onDismissed: (x) async {
                                           await FirebaseFirestore.instance
                                               .collection("user")
                                               .doc(vendorData.vId)
